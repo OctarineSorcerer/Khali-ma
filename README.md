@@ -7,9 +7,16 @@ This will put a copy of Khali-ma in that directory!
 
 STORE YOUR CHANGES
 Make sure you're in the directory (with the cd thing above, but into the Khali-Ma folder too) eg: cd "M:\Game Jam\Khali-Ma"
-type: git add *
-type: git commit
+Should say (master) after the name after that
+type: git add -A
+type: git commit -m "Describe what you did here"
+type: git push
+
+After this, it should ask you for your git username and password, type 'em in
 
 WANNA GET CHANGES OTHER PEOPLE HAVE MADE ON YOURS?
 Make sure you're in the directory (with the cd thing above, but into the Khali-Ma folder too) eg: cd "M:\Game Jam\Khali-Ma"
-Type
+Type "git pull"
+Pretty sure it'll ask you for your git username and password, type them in. Your stuff should update
+
+SCREAM AT DAN IF IT CONFUSES YOU OR IT FUDGES UP
