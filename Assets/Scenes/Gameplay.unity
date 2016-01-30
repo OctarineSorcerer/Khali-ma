@@ -231,7 +231,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .278979242, g: .293444842, b: .316176474, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -389,6 +389,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: addb8a3f48ba2e44f9281b6063867c70,
         type: 3}
+    - target: {fileID: 21231702, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
   m_IsPrefabParent: 0
@@ -594,11 +598,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 479596, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -131
+      value: -157
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 59
+      value: 170
       objectReference: {fileID: 0}
     - target: {fileID: 479596, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -639,6 +643,10 @@ Prefab:
     - target: {fileID: 11463646, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
       propertyPath: Description
       value: A very wet thing
+      objectReference: {fileID: 0}
+    - target: {fileID: 21231702, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 365e0fbaa4e606f4aa36d0a15d5d04d9, type: 2}
