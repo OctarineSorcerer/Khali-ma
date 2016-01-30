@@ -21,7 +21,7 @@ public class TextManager : MonoBehaviour {
         StartCoroutine(ScrollThroughText(text));
     }
 
-    private IEnumerator ScrollThroughText(string text)
+    public IEnumerator ScrollThroughText(string text) //Just won't be visible with buttons really
     {
         Text displayText = GetComponentInChildren<Text>();
         float waitTime = 1 / lettersPerSecond;
