@@ -3,8 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class TextManager : MonoBehaviour {
-
-	bool called = false;
+	
     public float lettersPerSecond;
 
 	// Use this for initialization
@@ -25,7 +24,6 @@ public class TextManager : MonoBehaviour {
 
     public IEnumerator ScrollThroughText(string text) //Just won't be visible with buttons really
     {
-		called = true;
         Text displayText = GetComponentInChildren<Text>();
         float waitTime = 1 / lettersPerSecond;
 
@@ -39,6 +37,5 @@ public class TextManager : MonoBehaviour {
                 yield return new WaitForSeconds(waitTime);
             }
         }
-		called = false;
     }
 }
