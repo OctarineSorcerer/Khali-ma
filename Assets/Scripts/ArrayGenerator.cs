@@ -36,8 +36,8 @@ public class ArrayGenerator : MonoBehaviour {
 			for (int elemIndex = 0; elemIndex < elem.Count; elemIndex++)
 			{
 				//test the chosen reagent against the current existing element
-				if (reagents[index].Name == "Holy" && elem[elemIndex].Name == "Darkness"
-				    || reagents[index].Name == "Darkness" && elem[elemIndex].Name == "Holy") 
+				if (reagents[index].Name == "Holy Relic" && elem[elemIndex].Name == "Dark Beads"
+				    || reagents[index].Name == "Dark Beads" && elem[elemIndex].Name == "Holy Relic") 
 				{
 					//if a contradiction exist it flags this and breaks the loop
 					contradiction = true;
