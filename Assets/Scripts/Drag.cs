@@ -5,14 +5,16 @@ using UnityEngine.EventSystems;
 public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject itemBeingDragged;
 	Vector3 startPos;
+	Transform startParent;
 
 
 	#region IBeginDragHandler implementation
 	public void OnBeginDrag (PointerEventData eventData)
 	{
-		Debug.Log ("woooo start");
 		itemBeingDragged = gameObject;
 		startPos = transform.position;
+		startParent = transform.parent;
+		//GetComponent<CanvasGroup> ().blocksRaycasts = false;
 	}
 	#endregion
 
@@ -20,7 +22,6 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
 	public void OnDrag (PointerEventData eventData)
 	{
-		Debug.Log ("woooo mid");
 		transform.position = Input.mousePosition;
 	}
 
@@ -31,18 +32,11 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 	public void OnEndDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = null;
-
+		//GameObject.Find("Canvas").blocksRaycasts = true;
+		//if (transform.parent != startParent) {
+			transform.position = startPos;
+		//}
 	}
 
 	#endregion
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }
