@@ -14,7 +14,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 		itemBeingDragged = gameObject;
 		startPos = transform.position;
 		startParent = transform.parent;
-		//GetComponent<CanvasGroup> ().blocksRaycasts = false;
+		GetComponent<CanvasGroup>().blocksRaycasts = false;
 	}
 	#endregion
 
@@ -32,10 +32,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 	public void OnEndDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = null;
-		//GameObject.Find("Canvas").blocksRaycasts = true;
-		//if (transform.parent != startParent) {
+		GetComponent<CanvasGroup>().blocksRaycasts = true;
+		if (transform.parent == startParent) {
 			transform.position = startPos;
-		//}
+		}
 	}
 
 	#endregion
