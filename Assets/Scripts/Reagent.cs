@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 
 
@@ -10,7 +11,8 @@ public class Reagent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		Text panelText = GetComponentInChildren<Text> ();
+		panelText.text = Description;
 	}
 	
 	// Update is called once per frame
