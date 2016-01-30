@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11489514}
   - 114: {fileID: 11447868}
   - 114: {fileID: 11405634}
+  - 114: {fileID: 11430818}
   m_Layer: 5
   m_Name: Reagent
   m_TagString: Untagged
@@ -49,6 +50,7 @@ GameObject:
   - 222: {fileID: 22222996}
   - 114: {fileID: 11400974}
   - 114: {fileID: 11454010}
+  - 225: {fileID: 22582550}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -104,6 +106,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b33743f49eea2743859163a074c77fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11430818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28b4bc681db720a4a8fa87110281d102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11434398
@@ -349,13 +362,28 @@ RectTransform:
   m_AnchoredPosition: {x: -149.5, y: -5.72199997e-06}
   m_SizeDelta: {x: 53, y: 44}
   m_Pivot: {x: .5, y: .5}
+--- !u!225 &22582550
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160746}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_IgnoreParentGroups
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 128882}
