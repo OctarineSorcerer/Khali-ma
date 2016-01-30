@@ -8,32 +8,7 @@ public class ReagentManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		reagents = new List<Reagent>() {
-			new Reagent("Charcoal", 
-			            "Burnt wood... Some say that if you use it to draw a summoning array on someone’s face, you could bring out his true self. So far people who’ve tried this just looked like idiots.",
-			            Resources.Load<Sprite>("Item_Charcoal")), 
-			new Reagent("Holy Relic",
-			            "An ancient relic used in some religion. Someone possibly would kill for it. And you’re about to use it to open a door. You monster.",
-			            Resources.Load<Sprite>("Item_Cross")), 
-			new Reagent("Flask",
-			            "'I swear, this is water. I guarantee it!' *hic*",
-			            Resources.Load<Sprite>("Item_Flask")),
-            new Reagent("Rocks",
-                        "A bunch of rocks. Useful for making tools, and hitting someone in the head. Both are equally funny.",
-                        Resources.Load<Sprite>("Item_Rock")),
-            new Reagent("Battery",
-                        "A very modern invention, harnessing energy in a small, cylindrical container. DO NOT LICK!",
-                        Resources.Load<Sprite>("Item_BatteryBox")),
-            new Reagent("Dark Beads",
-                        "These orbs contain the very essence of darkness and evil, able to corrupt the minds of lesser men. They are totally not marbles that have painted black. Totally evil marbles…",
-                        Resources.Load<Sprite>("Item_Marbles")),
-            new Reagent("Leaf",
-                        "A collection of leafs from a multitude of flowers, carefully assembled using your neighbour’s flowerbed that he treated for years. In case of vegetarians attack, throw them at the vegetarian and run.",
-                        Resources.Load<Sprite>("Item_Flower")),
-            new Reagent("Ice",
-                        "The holy grail of mankind. Cooling drinks, mitigating pain, making people slip, ice is the solution to all of your problems.",
-                        Resources.Load<Sprite>("Item_IceCubeTray"))
-		};
+		reagents = ReagentList.reagents;
 
 		GameObject panel = GameObject.Find("Reagents");
 		foreach(Reagent reagent in reagents) {
