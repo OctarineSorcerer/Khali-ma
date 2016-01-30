@@ -16,15 +16,15 @@ public class ReagentManager : MonoBehaviour {
 			            "An ancient relic used in some religion. Someone possibly would kill for it. And you’re about to use it to open a door. You monster.",
 			            Resources.Load<Sprite>("Item_Cross")), 
 			new Reagent("Flask",
-			            "\“I swear, this is water. I guarantee it!\” *hic*",
+			            "'I swear, this is water. I guarantee it!' *hic*",
 			            Resources.Load<Sprite>("Item_Flask"))
 		};
 
 		GameObject panel = GameObject.Find("Reagents");
 		foreach(Reagent reagent in reagents) {
-			GameObject reagentPanel = Instantiate(prefab);
-			Reagent rScript = reagentPanel.GetComponent<Reagent>();
-			rScript = reagent;
+			Transform reagentPanel = Instantiate(prefab);
+			ReagentBox rScript = reagentPanel.GetComponent<ReagentBox>();
+			rScript.reagent = reagent;
 			rScript.SetReagentImage();
 
 			reagentPanel.transform.SetParent(panel.transform, false);

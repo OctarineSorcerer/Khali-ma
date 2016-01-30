@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 
 
-public class Reagent : MonoBehaviour {
+public class Reagent {
 
     public string Name;
     public string Description;
@@ -24,24 +24,7 @@ public class Reagent : MonoBehaviour {
 		this.Affinities = new List<Affinity>();
 	}
 
-	// Use this for initialization
-	void Start () {
-		Text panelText = GetComponentInChildren<Text> ();
-		panelText.text = Description;
+	public Reagent() {  //Reflection. Every damn time
 
-		SetReagentImage ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-	public void SetReagentImage() {
-		Transform reagentImage = transform.Find ("Image"); // GetComponentInChildren<Image> ();
-		if (reagentImage != null) {
-			reagentImage.GetComponent<Image>().sprite = sprite;
-		}
-	}
-	
 }

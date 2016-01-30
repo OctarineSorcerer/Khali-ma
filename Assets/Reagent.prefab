@@ -10,8 +10,8 @@ GameObject:
   - 224: {fileID: 22406458}
   - 222: {fileID: 22275006}
   - 114: {fileID: 11489514}
-  - 114: {fileID: 11470014}
   - 114: {fileID: 11447868}
+  - 114: {fileID: 11405634}
   m_Layer: 5
   m_Name: Reagent
   m_TagString: Untagged
@@ -94,6 +94,17 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11405634
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 128882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b33743f49eea2743859163a074c77fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11434398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,24 +195,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &11470014
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 128882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eaf8bb0ac811b445978893716f22217, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Name: Charcoal
-  Description: "Burnt wood... Some say that if you use it to draw a summoning array
-    on someone\u2019s face, you could bring out his true self. So far people who\u2019ve
-    tried this just looked like idiots."
-  sprite: {fileID: 21300000, guid: a64fe1f2526a81e4d9aed387e93da735, type: 3}
-  Affinities:
-  - {fileID: 0}
 --- !u!114 &11475866
 MonoBehaviour:
   m_ObjectHideFlags: 1
