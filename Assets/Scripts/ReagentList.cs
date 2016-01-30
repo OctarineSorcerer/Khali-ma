@@ -13,8 +13,23 @@ public class ReagentList {
 		new Reagent("Flask",
 		            "'I swear, this is water. I guarantee it!' *hic*",
 		            Resources.Load<Sprite>("Item_Flask")),
+        new Reagent("Rocks",
+                        "A bunch of rocks. Useful for making tools, and hitting someone in the head. Both are equally funny.",
+                        Resources.Load<Sprite>("Item_Rock")),
+        new Reagent("Battery",
+                        "A very modern invention, harnessing energy in a small, cylindrical container. DO NOT LICK!",
+                        Resources.Load<Sprite>("Item_BatteryBox")),
+        new Reagent("Dark Beads",
+                        "These orbs contain the very essence of darkness and evil, able to corrupt the minds of lesser men. They are totally not marbles that have painted black. Totally evil marbles…",
+                        Resources.Load<Sprite>("Item_Marbles")),
+        new Reagent("Leaf",
+                        "A collection of leafs from a multitude of flowers, carefully assembled using your neighbour’s flowerbed that he treated for years. In case of vegetarians attack, throw them at the vegetarian and run.",
+                        Resources.Load<Sprite>("Item_Flower")),
+        new Reagent("Ice",
+                        "The holy grail of mankind. Cooling drinks, mitigating pain, making people slip, ice is the solution to all of your problems.",
+                        Resources.Load<Sprite>("Item_IceCubeTray"))
 
-	};
+    };
 
 	public static List<Reagent> elem = ArrayGenerator.elem;
 	
