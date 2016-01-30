@@ -19,6 +19,9 @@ public class ReagentBox : MonoBehaviour {
 		
 	}
 
+	/// <summary>
+	/// Sets the reagent image. Would we want to set some metadata with it?
+	/// </summary>
 	public void SetReagentImage() {
 		Transform reagentImage = transform.Find ("Image"); // GetComponentInChildren<Image> ();
 		if (reagentImage != null) {

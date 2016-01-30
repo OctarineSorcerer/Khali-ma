@@ -4,6 +4,8 @@ using UnityEngine.EventSystems;
 
 public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject itemBeingDragged;
+	public static Reagent reagent; //It's almost definitely gonna be a reagent that's being dragged
+
 	Vector3 startPos;
 	Transform startParent;
 
@@ -12,9 +14,11 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 	public void OnBeginDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = gameObject;
+		reagent = gameObject.GetComponentInParent<ReagentBox> ().reagent;
+
 		startPos = transform.position;
 		startParent = transform.parent;
-		GetComponent<CanvasGroup>().blocksRaycasts = false;
+		GetComponent<CanvasGroup>().blocksRaycasts = false; //Go transparent m'boi
 	}
 	#endregion
 
@@ -32,6 +36,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 	public void OnEndDrag (PointerEventData eventData)
 	{
 		itemBeingDragged = null;
+		reagent = null;
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
 		if (transform.parent == startParent) {
 			transform.position = startPos;
