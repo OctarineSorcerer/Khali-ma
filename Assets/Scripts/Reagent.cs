@@ -14,7 +14,14 @@ public class Reagent : MonoBehaviour {
 		this.Name = name;
 		this.Description = description;
 		this.sprite = sprite;
-		this.Affinities = affinities
+		this.Affinities = affinities;
+	}
+
+	public Reagent(string name, string description, Sprite sprite) {
+		this.Name = name;
+		this.Description = description;
+		this.sprite = sprite;
+		this.Affinities = new List<Affinity>();
 	}
 
 	// Use this for initialization

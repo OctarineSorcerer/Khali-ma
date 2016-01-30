@@ -49,7 +49,7 @@ GameObject:
   - 222: {fileID: 22222996}
   - 114: {fileID: 11400974}
   m_Layer: 5
-  m_Name: Charcoal
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 03f5eaf43f13b2648b5d4c302f25e199, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -170,13 +170,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 22447298}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: .100000001
   m_Inertia: 1
   m_DecelerationRate: .135000005
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 3
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 0}
   m_OnValueChanged:
@@ -195,9 +195,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf8bb0ac811b445978893716f22217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Name: Holy Relic
-  Description: "An ancient relic used in some religion. Someone possibly would kill
-    for it. And you\u2019re about to use it to open a door. You monster."
+  Name: Charcoal
+  Description: "Burnt wood... Some say that if you use it to draw a summoning array
+    on someone\u2019s face, you could bring out his true self. So far people who\u2019ve
+    tried this just looked like idiots."
+  sprite: {fileID: 21300000, guid: a64fe1f2526a81e4d9aed387e93da735, type: 3}
   Affinities:
   - {fileID: 0}
 --- !u!114 &11475866
@@ -214,13 +216,13 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 79da06c8c8c104b4096c6d3c1f05c388, type: 3}
     m_FontSize: 16
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
@@ -305,8 +307,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 28.6000004, y: .100000001}
-  m_SizeDelta: {x: -71.0999985, y: -13.8000002}
+  m_AnchoredPosition: {x: 28.5999374, y: .100000381}
+  m_SizeDelta: {x: -71.1000061, y: -13.7999992}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22447298
 RectTransform:
@@ -320,11 +322,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22414980}
   m_RootOrder: 0
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -1.14440008e-05, y: -16.4999943}
-  m_SizeDelta: {x: 276.799988, y: 0}
-  m_Pivot: {x: .5, y: .5}
+  m_AnchorMin: {x: .5, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: -1.23977661e-05, y: -32.0999985}
+  m_SizeDelta: {x: 279.799988, y: 0}
+  m_Pivot: {x: .5, y: 1}
 --- !u!224 &22461928
 RectTransform:
   m_ObjectHideFlags: 1
