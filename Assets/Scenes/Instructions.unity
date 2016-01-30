@@ -118,8 +118,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -12, y: 0}
-  m_SizeDelta: {x: 676, y: 509}
+  m_AnchoredPosition: {x: 8, y: 0}
+  m_SizeDelta: {x: 1132, y: 535}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &232718647
 MonoBehaviour:
@@ -135,18 +135,32 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
+    m_Font: {fileID: 12800000, guid: d117df654a6193b4493850e6515b6bc2, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 2
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: <Instruction Text Here>
+  m_Text: "You\u2019re an alchemist. Do your job, which is countering magical seals
+    on doors. It\u2019s easy. But in case you skipped lock picking classes (who needs
+    these anyways?), here\u2019s a few guidelines:\r\n\n\n\n1.\tSeals are made up
+    of eight elements. So to break a seal you have to make a counter-array, which
+    is stronger than the seal. A whale won\u2019t work.\r\n2.\tNo, I\u2019m not going
+    to tell you what beats what, you have a brain.\r\n3.\tDrag items from your inventory
+    to a circle on your array. Yes I mean drag: you\u2019re an alchemist, not a warrior.\r\n4.\tWhen
+    all six items are on the array (which means six items, you did go to school, didn\u2019t
+    you?), you can test out your array. If it doesn\u2019t work, you\u2019ll see what
+    went wrong.\r\n5.\tEveryone will judge you.\r\n\n\n\nThat should be enough.  Why
+    am I writing this? You won\u2019t read this anyway. It\u2019s not like knowing
+    what to do can help you or anything. Finally, bad luck. What? No, I don\u2019t
+    mean good luck. Good luck would imply your job needs luck, whereas you merely
+    need a functioning brain for alchemy. Even my son could do this, and he\u2019s
+    four. \r\n\r\nWhy am I telling you this anyways; you\u2019re an alchemist.\r\nRight?\r"
 --- !u!222 &232718648
 CanvasRenderer:
   m_ObjectHideFlags: 0
