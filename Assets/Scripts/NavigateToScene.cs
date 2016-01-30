@@ -8,4 +8,9 @@ public class NavigateToScene : MonoBehaviour
     {
         Application.LoadLevel(sceneName);
     }
+
+	public void Exit()
+	{
+		Application.Quit();
+	}
 }
