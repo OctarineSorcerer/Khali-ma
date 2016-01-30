@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using ReagentManager;
 
 public class ReagentList {
 
@@ -13,7 +12,8 @@ public class ReagentList {
 		            Resources.Load<Sprite>("Item_Cross")), 
 		new Reagent("Flask",
 		            "'I swear, this is water. I guarantee it!' *hic*",
-		            Resources.Load<Sprite>("Item_Flask"))
+		            Resources.Load<Sprite>("Item_Flask")),
+
 	};
 
 	public static List<Reagent> elem = ArrayGenerator.elem;

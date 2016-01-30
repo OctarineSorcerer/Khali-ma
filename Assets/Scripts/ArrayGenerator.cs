@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 using System;
+using System.Linq;
 
 public class ArrayGenerator : MonoBehaviour {
 
@@ -48,10 +49,9 @@ public class ArrayGenerator : MonoBehaviour {
 			if (contradiction == false) 
 			{
 				elem.Add(reagents[index]);
-				reagentIndex++
+				reagentIndex++;
 			}
 		
 		}
-
+	}
 }
-
