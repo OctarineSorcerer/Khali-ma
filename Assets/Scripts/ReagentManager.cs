@@ -15,7 +15,7 @@ public class ReagentManager : MonoBehaviour {
 			Transform reagentPanel = Instantiate(prefab);
 			ReagentBox rScript = reagentPanel.GetComponent<ReagentBox>();
 			rScript.reagent = reagent;
-			rScript.SetReagentImage();
+			rScript.SetLargeReagentImage();
 
 			reagentPanel.transform.SetParent(panel.transform, false);
 		}

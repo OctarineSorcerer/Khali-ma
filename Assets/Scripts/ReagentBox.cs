@@ -11,7 +11,7 @@ public class ReagentBox : MonoBehaviour {
 		Text panelText = GetComponentInChildren<Text> ();
 		panelText.text = reagent.Description;
 		
-		SetReagentImage();
+		SetLargeReagentImage();
 	}
 	
 	// Update is called once per frame
@@ -22,10 +22,19 @@ public class ReagentBox : MonoBehaviour {
 	/// <summary>
 	/// Sets the reagent image. Would we want to set some metadata with it?
 	/// </summary>
-	public void SetReagentImage() {
+	public void SetLargeReagentImage() {
 		Transform reagentImage = transform.Find ("Image"); // GetComponentInChildren<Image> ();
 		if (reagentImage != null) {
-			reagentImage.GetComponent<Image>().sprite = reagent.sprite;
+			reagentImage.GetComponent<Image>().sprite = reagent.largeSprite;
+		}
+	}
+
+	public void SetSmallReagentImage() {
+		Transform reagentImage = transform.Find ("Image"); // GetComponentInChildren<Image> ();
+		if (reagentImage != null) {
+			var image = reagentImage.GetComponent<Image>();
+			image.sprite = reagent.smallSprite;
+			image.SetNativeSize();
 		}
 	}
 
