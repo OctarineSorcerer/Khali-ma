@@ -7,7 +7,13 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 	public static Reagent draggedReagent; //It's almost definitely gonna be a reagent that's being dragged
 
 	Vector3 startPos;
-	Transform startParent;
+	static Transform startParent;
+
+    public static Transform StartParent
+    {
+        get { return startParent; }
+    }
+
 
 
 	#region IBeginDragHandler implementation
@@ -23,6 +29,8 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 		startPos = transform.position;
 		startParent = transform.parent;
 		GetComponent<CanvasGroup>().blocksRaycasts = false; //Go transparent m'boi
+
+        transform.SetParent(GameObject.Find("Canvas").transform); //FREEDOM FROM THE MASSSSSK
 	}
 	#endregion
 
@@ -42,8 +50,10 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 		itemBeingDragged = null;
 		draggedReagent = null;
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
-		if (transform.parent == startParent) {
+        if (transform.parent == GameObject.Find("Canvas").transform)
+        {
 			transform.position = startPos;
+            transform.SetParent(startParent); //Go back to whence ye came
 		}
 	}
 

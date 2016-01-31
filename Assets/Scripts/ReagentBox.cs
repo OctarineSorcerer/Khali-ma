@@ -20,7 +20,7 @@ public class ReagentBox : MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Sets the reagent image. Would we want to set some metadata with it?
+	/// For being a big reagent, in a big box. Awwwwwww.
 	/// </summary>
 	public void SetLargeReagentImage() {
 		Transform reagentImage = transform.Find ("Image"); // GetComponentInChildren<Image> ();
