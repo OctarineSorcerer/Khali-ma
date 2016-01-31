@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Affinity : MonoBehaviour {
+public class Affinity {
 
     public ElementName element;
     public byte amount;
@@ -10,14 +10,4 @@ public class Affinity : MonoBehaviour {
     {
         Fire, Water, Earth, Lightning
     }
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 }

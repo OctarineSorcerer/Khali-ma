@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler {
 	public static GameObject itemBeingDragged;
@@ -19,18 +20,19 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 	#region IBeginDragHandler implementation
 	public void OnBeginDrag (PointerEventData eventData)
 	{
-		itemBeingDragged = gameObject;
 		var reagentBox = gameObject.GetComponentInParent<ReagentBox> ();
 		if (reagentBox != null) {
 			draggedReagent = reagentBox.reagent;
-			reagentBox.SetSmallReagentImage ();
 		}
 
 		startPos = transform.position;
 		startParent = transform.parent;
 		GetComponent<CanvasGroup>().blocksRaycasts = false; //Go transparent m'boi
 
-        transform.SetParent(GameObject.Find("Canvas").transform); //FREEDOM FROM THE MASSSSSK
+		itemBeingDragged = Instantiate (gameObject);
+		itemBeingDragged.GetComponent<Image> ().sprite = draggedReagent.largeSprite;
+		itemBeingDragged.GetComponent<Image> ().SetNativeSize ();
+        itemBeingDragged.transform.SetParent(GameObject.Find("Canvas").transform); //FREEDOM FROM THE MASSSSSK
 	}
 	#endregion
 
@@ -38,7 +40,7 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
 	public void OnDrag (PointerEventData eventData)
 	{
-		transform.position = Input.mousePosition;
+		itemBeingDragged.transform.position = Input.mousePosition;
 	}
 
 	#endregion
@@ -47,14 +49,15 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHand
 
 	public void OnEndDrag (PointerEventData eventData)
 	{
+		Destroy (itemBeingDragged);
 		itemBeingDragged = null;
-		draggedReagent = null;
 		GetComponent<CanvasGroup>().blocksRaycasts = true;
-        if (transform.parent == GameObject.Find("Canvas").transform)
+        /*if (transform.parent == GameObject.Find("Canvas").transform)
         {
-			transform.position = startPos;
-            transform.SetParent(startParent); //Go back to whence ye came
-		}
+			transform.position = draggedReagent.reagentPanel.transform.position;
+            transform.SetParent(draggedReagent.reagentPanel); //Go back to whence ye came
+		}*/
+		draggedReagent = null;
 	}
 
 	#endregion

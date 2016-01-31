@@ -11,7 +11,7 @@ public class ArrayGenerator : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		SelectElem (2);
+		//SelectElem (2);
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,9 @@ public class ArrayGenerator : MonoBehaviour {
 
 	}
 	//generate the list of elements for the door array
-	public void SelectElem(int n) {
+	public static void SelectElem(int n) {
+		elem = new List<Reagent> ();
+		if (reagents == null) reagents = ReagentList.reagents;
 		int len = reagents.Count;
 		int index = 0;
 

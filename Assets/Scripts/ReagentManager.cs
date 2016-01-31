@@ -13,6 +13,8 @@ public class ReagentManager : MonoBehaviour {
 		GameObject panel = GameObject.Find("Reagents");
 		foreach(Reagent reagent in reagents) {
 			Transform reagentPanel = Instantiate(prefab);
+			reagent.reagentPanel = reagentPanel; //xiao wang
+
 			ReagentBox rScript = reagentPanel.GetComponent<ReagentBox>();
 			rScript.reagent = reagent;
 			rScript.SetLargeReagentImage();

@@ -1,55 +1,48 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IDropHandler {
+	bool droppedInSlot; //xiao wang
 
-	public GameObject reagent {
-		get {
-			if(transform.childCount>0) {
-				return transform.GetChild(0).gameObject; }
-			else return null;
-		}
-	} //Pfft, really will just be child
-    Transform originalParent;
+	public Reagent reagent = null; //Pfft, really will just be child
 
 	#region IDropHandler implementation
 
 	public void OnDrop (PointerEventData eventData)
 	{
-		//If we have absolutely nothing, like the peasant students we are
-		if (!reagent || reagent != null && reagent == Drag.itemBeingDragged) {
-            originalParent = Drag.StartParent;
-
-			Drag.itemBeingDragged.transform.SetParent(transform);
-			Drag.itemBeingDragged.transform.position = transform.position; //Lock with parent position (woo centering)
+		//Nothing in slot,
+		if (reagent == null) {
+			 
 			//Drag.itemBeingDragged.transform.localScale = new Vector3(0.7f, 0.7f, 0.7f); //This one was xiao wang, did it perfectly --Before we understood Angelica's UI intentions, that is
-
 			if(Drag.draggedReagent != null) {  //A reagent is being dragged onto this circle
-				Seal seal = gameObject.GetComponentInParent<Seal>();
-				seal.reagents.Add(Drag.draggedReagent); //Tell the circle you have a new Reagent
-				
+				Image image = GetComponent<Image>();
+
+				reagent = Drag.draggedReagent;
+				image.sprite = Drag.draggedReagent.smallSprite;
+				Color col = image.color;
+				col.a = 255;
+				image.color = col;
+				image.SetNativeSize(); //Works
+
+				Transform parentBox = reagent.reagentPanel;
+				Drag.itemBeingDragged.transform.SetParent(parentBox);
+				Drag.itemBeingDragged.transform.position = parentBox.position;
+
                 Debug.Log ("Added reagent: " + Drag.draggedReagent.Name);
 			}
+			droppedInSlot = true;
 		}
 	}
 
 	#endregion
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <returns>Original parent transform</returns>
-    public Transform SnapBack() //Snaps child element back to where it came from
+	
+    public void SnapBack() //Snaps child element back to where it came from
     {
-        Debug.Log(originalParent.name);
-        Transform output = originalParent;
-        if (reagent != null)
-        {
-            reagent.transform.SetParent(originalParent);
-            reagent.transform.position = originalParent.position;
-        }
-        return output;
+		GetComponent<Image> ().sprite = new Sprite ();
+		GetComponent<Image> ().color = new Color (1, 1, 1, 0);
+		reagent = null;
     }
 
 }

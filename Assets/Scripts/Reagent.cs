@@ -10,6 +10,7 @@ public class Reagent {
 	public Sprite smallSprite;
 	public Sprite largeSprite;
     public List<Affinity> Affinities;
+	public Transform reagentPanel; //xiao wang
 
 	public Reagent(string name, string description, Sprite smallSprite, Sprite largeSprite, List<Affinity> affinities) {
 		this.Name = name;
